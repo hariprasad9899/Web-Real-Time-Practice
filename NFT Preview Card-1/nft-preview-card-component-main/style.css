@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=M+PLUS+2:wght@300&display=swap');
+.attribution { font-size: 11px; text-align: center; bottom: 95%; }
+.attribution a { color: hsl(228, 45%, 44%); }
+body{
+background-color: hsl(217, 54%, 11%);
+font-family: 'Bebas Neue', cursive;
+font-family: 'M PLUS 2', sans-serif;
+}
+.card{
+    position: absolute;
+    width: 20%;
+    height: 85%;
+    background-color: white;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background-color: hsl(216, 50%, 16%);
+    border-radius: 15px;
+    box-shadow: 0px 30px 30px 0px rgba(5, 5, 5, 0.5);
+}
+.some{
+    width: 95%;
+    margin-left: 8%;
+    margin-right: 8%;
+    margin-top: 5%;
+}
+.imgeq{
+    border-radius: 20px;
+}
+.overlay{
+    position: absolute;
+    background-color: rgba(0, 255, 255, 0.445);
+    width: 85%;
+    height: 44%;
+    top: 3%;
+    border-radius: 20px;
+    transition: 1s ease-in-out;
+    opacity: 0 !important;
+}
+.imgeq:hover + .overlay{
+    opacity: 1 !important;
+}
+.overlay img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+h4{
+    color: hsl(0, 0%, 100%);
+    padding-left: 7%;
+    font-size: 18px;
+}
+p{
+    color: rgb(190, 179, 179);
+    padding-left: 7%;
+    font-size: 13px;
+}
+.price{
+    padding-left: 7%;
+}
+.price .euth,.time {
+    color: whitesmoke;
+    font-size: 75%;
+    float: left;
+}
+.price .time{
+    float: right;
+    padding-right: 7%;
+}
+.price::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+hr{
+    position: relative;
+    width: 90%;
+    top: 2%;
+    border: 1px solid hsl(215, 32%, 27%);
+}
+.creator{
+    color: whitesmoke;
+    padding-left: 6%;
+    padding-top: 5%;
+}
+.creator span img{
+    float: left;
+    padding-right: 8%;
+}
+.creator span .colortext{
+    color: rgb(155, 144, 144);
+}
