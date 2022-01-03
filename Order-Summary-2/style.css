@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=M+PLUS+2:wght@300&display=swap');
+body{
+    font-family: 'Bebas Neue', cursive;
+    font-family: 'M PLUS 2', sans-serif;
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+    
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
