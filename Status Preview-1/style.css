@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=M+PLUS+2:wght@300&display=swap');
+body{
+    font-family: 'Bebas Neue', cursive;
+    font-family: 'M PLUS 2', sans-serif;
+    background-color:  hsl(233, 47%, 7%);
+}
+.container{
+    position: absolute;
+    width: 70%;
+    height: 60%;
+    overflow: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    box-shadow: 0px 0px 10px 0px rgba(36, 32, 32, 0.618);
+    border-radius: 5px;
+}
+.right {
+    position: relative;
+    float: right;
+    height: 100%;
+    width: 50%;
+    z-index: 1;
+    background: url(images/image-header-desktop.jpg);
+    background-size: cover;
+    display: flex;
+}
+.right:before{
+    content: "";
+    background: hsl(277, 82%, 47%);;
+    width: 100%;
+    opacity: 0.5;
+
+}
+.left{
+    float: left;
+    width: 50%;
+    height: 100%;
+    background-color: hsl(244, 38%, 16%);
+}
+.left h1,p{
+    padding-left: 5%;
+    padding-right: 5%;
+    color: hsl(0, 0%, 100%);
+}
+.left p{
+    color: hsla(0, 0%, 100%, 0.75);
+    font-size: 100%;
+}
+#insight{
+    color: hsl(277, 82%, 47%);
+}
+.milestone{
+    position: relative;
+    width: 100%;
+}
+.milestone  .companies,.templates,.queries{
+    float: left;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.milestone p,h3{
+    padding-left: 0px;
+    line-height: 45%;
+    color: hsl(0, 0%, 100%);
+    font-weight: bolder;
+}
+
+.milestone p{
+    color: hsla(0, 0%, 100%, 0.6);
+    font-weight: lighter;
+    font-size: 90%;
+}
+@media screen and (max-width:350px) {
+    .container{
+        width: 90%;
+    }
+    .right{
+        position: absolute;
+        float: right;
+        width: 100%;
+        background-size: cover;
+    }
+    .left{
+        position: absolute;
+        width: 100%;
+        float: none;
+        height: auto;
+        margin-top: 90%;
+        text-align: center;
+    }
+    .milestone  .companies,.templates,.queries{
+        float: none;
+        position: relative;
+        text-align: center;
+        margin-top: 10%;
+    }
+    
+}
+
+
+
+
