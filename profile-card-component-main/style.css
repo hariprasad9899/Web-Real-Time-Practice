@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kumbh+Sans:wght@400;700&family=M+PLUS+2:wght@300&family=Roboto+Slab:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kumbh+Sans&family=M+PLUS+2:wght@300&family=Roboto+Slab:wght@300&display=swap');
+
+body{
+    font-family: 'Bebas Neue', cursive;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-family: 'M PLUS 2', sans-serif;
+    font-family: 'Roboto Slab', serif;
+    background-image: url(images/bg-pattern-bottom.svg);
+    background-image: url(images/bg-pattern-top.svg);
+    background-size: cover;
+    background-color: hsl(185, 75%, 39%);
+}
+
+.attribution{
+    font-size: 11px;
+    text-align: center;
+}
+.attribution a{ 
+    color: hsl(228, 45%, 44%); 
+}
+.card{
+    position: absolute;
+    background-color: white;
+    width: 25%;
+    height: auto;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 10px;
+    box-shadow: 0px 10px 10px rgba(2, 138, 113, 0.871);
+}
+
+.imgcon img{
+    position: absolute;
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.person img{
+    position: fixed;
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    border: 4px solid white;
+    transform: translate(-50%,-80%);
+}
+.info{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,20%);
+    text-align: center;
+    font-size: 18px;
+    line-height: 50%;
+}
+.info h3{
+    color:hsl(229, 23%, 23%);
+    font-weight: 700;
+}
+.color{
+    color: hsl(227, 10%, 46%);
+}
+hr{
+    position: absolute;
+    width: 100%;
+    top: 75%;
+}
+.datas .followers, .likes, .photos{
+    float: left;
+    position: relative;
+    padding: 10px;
+    margin-left: 4%;
+    margin-right: 4%;
+    margin-top: 80%;
+    line-height: 10%;
+}
+.datas h3{
+    color:hsl(229, 23%, 23%);
+    text-align: center;
+    font-size: 18px;
+}
+@media screen and (max-width:375px){
+    .card{
+        position: absolute;
+        width: 90%;
+    }
+    .person img{
+        position: absolute;
+        border-radius: 50%;
+        left: 50%;
+        top: 20%;
+        border: 4px solid white;
+        transform: translate(-50%,10%);
+        margin-bottom: 100px;
+    }
+    .info{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,20%);
+        text-align: center;
+        font-size: 18px;
+        line-height: 50%;
+    }
+}
