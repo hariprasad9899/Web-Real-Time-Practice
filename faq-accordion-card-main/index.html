@@ -19,43 +19,43 @@
         <h2><b>FAQ</b></h2>
         <div class="row one">
           <h3>How many team members can I invite?
-            <img src="images/icon-arrow-down.svg" alt="">
+            <img class="dropbtn 1" src="images/icon-arrow-down.svg" alt="">
            </h3>
-          <div class="dropcon" style="display: none;">
+          <div class="dropcon">
             You can invite up to 2 additional users on the Free plan. There is no limit on 
             team members for the Premium plan.
           </div>
         </div>
         <div class="row two">
           <h3>What is the maximum file upload size?
-            <img src="images/icon-arrow-down.svg" alt="">
+            <img class="dropbtn 2" src="images/icon-arrow-down.svg" alt="">
            </h3>
-          <div class="dropcon" style="display: none;">
+          <div class="dropcon">
             No more than 2GB. All files in your account must fit your allotted storage space.
           </div>
         </div>
         <div class="row three">
           <h3>How do I reset my password?
-            <img src="images/icon-arrow-down.svg" alt="">
+            <img class="dropbtn 3" src="images/icon-arrow-down.svg" alt="">
            </h3>
-          <div class="dropcon" style="display: none;">
+          <div class="dropcon">
             Click “Forgot password” from the login page or “Change password” from your profile page.
             A reset link will be emailed to you.
           </div>
         </div>
         <div class="row four">
           <h3>Can I cancel my subscription?
-            <img src="images/icon-arrow-down.svg" alt="">
+            <img class="dropbtn 4" src="images/icon-arrow-down.svg" alt="">
            </h3>
-          <div class="dropcon" style="display: none;">
+          <div class="dropcon">
             Yes! Send us a message and we’ll process your request no questions asked.
           </div>
         </div>
         <div class="row five">
           <h3>Do you provide additional support?
-            <img src="images/icon-arrow-down.svg" alt="">
+            <img class="dropbtn 5" src="images/icon-arrow-down.svg" alt="">
            </h3>
-          <div class="dropcon" style="display: none;">
+          <div class="dropcon">
             Chat and email support is available 24/7. Phone lines are open during normal business hours.
           </div>
         </div>
@@ -63,8 +63,40 @@
     </div>
   </body>
   <script>
-    function show(){
 
+    var dropcons = document.getElementsByClassName('dropcon')
+    const dropbtns = document.getElementsByClassName('dropbtn')
+    function clear(a){
+      alert('hi')
+      for( let k = 0; k < dropcons.length; k++){
+        dropcons[k].style.display = 'none';
+      }
+      a.classList.toggle('show');
     }
+    for ( let i = 0; i < dropbtns.length; i++){
+      dropbtns[i].addEventListener('click',function(){
+        var content = dropbtns[i].parentNode.parentNode;
+        var dropcon = content.getElementsByClassName('dropcon')[0];
+        clear(dropcon)
+        // dropcon.classList.toggle('show')
+        dropbtns[i].classList.toggle('rotate')
+        dropbtns[i].parentNode.classList.toggle('highlight');
+      })
+    }
+
+    // var dropcons = document.getElementsByClassName('dropcon')
+    // const dropbtns = document.getElementsByClassName('dropbtn')
+    // for ( let i = 0; i < dropbtns.length; i++){
+    //   dropbtns[i].addEventListener('click',function(){
+    //     // for( let k = 0; k < dropcons.length; k++){
+    //     //   dropcons[k].style.display = 'none';
+    //     // }
+    //     var content = dropbtns[i].parentNode.parentNode;
+    //     var dropcon = content.getElementsByClassName('dropcon')[0];
+    //     dropcon.classList.toggle('show');
+    //     dropbtns[i].classList.toggle('rotate')
+    //     dropbtns[i].parentNode.classList.toggle('highlight');
+    //   })
+    // }
   </script>
 </html>
