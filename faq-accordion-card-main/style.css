@@ -1,7 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kumbh+Sans&family=M+PLUS+2:wght@300&family=Roboto+Slab:wght@300&display=swap');
+
 .attribution{ 
     font-size: 11px; 
     text-align: center; 
 }
 .attribution a{ 
     color: hsl(228, 45%, 44%); 
+}
+html{
+    height: 100%;
+    position: relative;
+}
+body{
+    font-family: 'Bebas Neue', cursive;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-family: 'M PLUS 2', sans-serif;
+    font-family: 'Roboto Slab', serif;
+    background-image: linear-gradient(to top,hsl(273, 75%, 66%),hsl(240, 73%, 65%));
+}
+.container{
+    position: absolute;
+    height: 70%;
+    width: 60%;
+    background-color: hsl(240, 5%, 91%);
+    border-radius: 15px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    overflow: hidden;
+}
+
+.bgimg-con img{
+    position: absolute;
+    width: 80%;
+    height: 160%;
+    right: 60%;
+    top: -50%;
+}
+.woman img{
+    position: absolute;
+    width: 50%;
+    right: 60%;
+    top: 5%;
+}
+.content{
+    position: relative;
+    width: 55%;
+    height: 100%;
+    float: right;
+    background-color: rgb(248, 241, 241);
+    text-align: left;
+    font-weight: 400;
+    font-size: 12px;
+}
+.content .row{
+    position: relative;
+    width: 80%;
+    border-bottom: 1px solid rgb(189, 183, 183);
+}
+.content .row{
+    position: relative;
+}
+.content .row h3 img{
+    position: absolute;
+    right: -1%;
+    top: 15%;
+    user-select: none;
+    cursor: pointer;
 }
