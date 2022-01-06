@@ -77,9 +77,6 @@ body{
     display: none;
     padding-bottom: 2%;
 }
-.show{
-    display: block;
-}
 .rotate{
     transform: rotate(180deg);
     position: fixed;

@@ -64,39 +64,44 @@
   </body>
   <script>
 
-    var dropcons = document.getElementsByClassName('dropcon')
-    const dropbtns = document.getElementsByClassName('dropbtn')
-    function clear(a){
-      alert('hi')
-      for( let k = 0; k < dropcons.length; k++){
-        dropcons[k].style.display = 'none';
-      }
-      a.classList.toggle('show');
-    }
-    for ( let i = 0; i < dropbtns.length; i++){
-      dropbtns[i].addEventListener('click',function(){
-        var content = dropbtns[i].parentNode.parentNode;
-        var dropcon = content.getElementsByClassName('dropcon')[0];
-        clear(dropcon)
-        // dropcon.classList.toggle('show')
-        dropbtns[i].classList.toggle('rotate')
-        dropbtns[i].parentNode.classList.toggle('highlight');
-      })
-    }
-
     // var dropcons = document.getElementsByClassName('dropcon')
     // const dropbtns = document.getElementsByClassName('dropbtn')
+    
     // for ( let i = 0; i < dropbtns.length; i++){
     //   dropbtns[i].addEventListener('click',function(){
-    //     // for( let k = 0; k < dropcons.length; k++){
-    //     //   dropcons[k].style.display = 'none';
-    //     // }
     //     var content = dropbtns[i].parentNode.parentNode;
     //     var dropcon = content.getElementsByClassName('dropcon')[0];
-    //     dropcon.classList.toggle('show');
+    //     for( var k = 0; k < dropcons.length; k++){
+    //     dropcons[k].style.display = 'none';
+    //   }
+    //     dropcon.classList.toggle('show')
     //     dropbtns[i].classList.toggle('rotate')
     //     dropbtns[i].parentNode.classList.toggle('highlight');
     //   })
     // }
+
+    var dropcons = document.getElementsByClassName('dropcon')
+    const dropbtns = document.getElementsByClassName('dropbtn')
+    for ( let i = 0; i < dropbtns.length; i++){
+      dropbtns[i].addEventListener('click',function(){
+        // for( let k = 0; k < dropcons.length; k++){
+        //   dropcons[k].style.display = 'none';
+        // }
+        var content = dropbtns[i].parentNode.parentNode;
+        var dropcon = content.getElementsByClassName('dropcon')[0];
+        dropcon.classList.toggle('show');
+        if(dropcon.style.display == 'block'){
+          counter = 1
+          console.log(counter)
+        }
+        else{
+          counter = 0;
+          console.log(counter)
+        }
+        
+        dropbtns[i].classList.toggle('rotate')
+        dropbtns[i].parentNode.classList.toggle('highlight');
+      })
+    }
   </script>
 </html>
