@@ -18,56 +18,43 @@ body{
     background-image: linear-gradient(to top,hsl(273, 75%, 66%),hsl(240, 73%, 65%));
 }
 .container{
-    
     position: absolute;
-    height: auto;
+    height: 70%;
     width: 60%;
     background-color: rgb(248, 241, 241);
-    border-radius: 15px;
+    border-radius: 10px;
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%);
+    overflow: hidden;
+    box-shadow: 0px 10px 10px rgba(37, 37, 37, 0.404);
 }
 .bgimg-con img{
     position: absolute;
-    width: 80%;
-    height: 160%;
-    right: 60%;
+    width: 100%;
+    height: 180%;
+    right: 58%;
     top: -50%;
 }
 .woman img{
     position: absolute;
     width: 50%;
-    right: 60%;
-    top: 5%;
+    right: 57%;
+    top: 10%;
 }
 .box img{
+    top: 43%;
+    left: 15%;
+    z-index: 1;
     position: absolute;
-    left: -20%;
-    top: 30%;
-    z-index: 2;
+    width: 11%;
+    transition: 0.3s ease-in-out;
 }
-.move{
-    animation-name: movement;
-    animation-duration: 0.7s;
-    animation-iteration-count: 1;
-    animation-play-state: running;
+.box .move{
+    left: 13%;
 }
-@keyframes movement {
-    0% {
-      transform: translateX(0px);
-    }
-    42% {
-      transform: translateX(-20px);
-    }
-    100% {
-      transform: translateX(-45px);
-    }
-  }
-
 .content h2{
     padding-top: 5%;
-    font-weight: 400;
 }
 .content{
     position: relative;
@@ -76,9 +63,10 @@ body{
     float: right;
     background-color: rgb(248, 241, 241);
     text-align: left;
-    font-weight: 400;
+    font-weight: 200;
     font-size: 12px;
     padding-left: 30px;
+    border-radius: 10px;
 }
 .content .row{
     position: relative;
@@ -87,7 +75,7 @@ body{
 }
 .content .row{
     position: relative;
-    transition: 0.3s ease-in-out;
+    transition: 0.1s ease-in-out;
 }
 .content .row {
     position: relative;
@@ -98,10 +86,10 @@ body{
     position: relative;
     float: right;
     top: -25px;
-    transition: 0.5s linear;
+    transition: 0.3s linear;
 }
 .content .row .head h3{
-    font-weight: 700;
+    font-weight: 400;
 }
 .dropcon{
     display: none;
@@ -121,10 +109,9 @@ body{
     color: hsl(14, 88%, 65%);
 }
 .highlight{
-    color: hsl(237, 12%, 33%);
+    color: hsl(14, 94%, 50%);
     transition: 0.3s ease;
-    font-size: 12px;
+    font-weight: 700;
+    font-size: 14px;
 }
-.highlight:active{
-    color: hsl(14, 88%, 65%);
-}
+

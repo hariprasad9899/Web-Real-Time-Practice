@@ -8,15 +8,15 @@
     <title>Frontend Mentor | FAQ Accordion Card</title>
   </head>
   <body>
+    <div class="box">
+      <img id="boximg" src="images/illustration-box-desktop.svg" alt="">
+    </div>
     <div class="container">
       <div class="bgimg-con">
         <img src="images/bg-pattern-desktop.svg" alt="">
       </div>
       <div class="woman">
         <img src="images/illustration-woman-online-desktop.svg" alt="">
-      </div>
-      <div class="box">
-        <img id="boximg" src="images/illustration-box-desktop.svg" alt="">
       </div>
       <div class="content">
         <h2><b>FAQ</b></h2>
@@ -71,44 +71,105 @@
     </div>
   </body>
   <script>
-
-    // var dropcons = document.getElementsByClassName('dropcon')
-    // const dropbtns = document.getElementsByClassName('dropbtn')
     
-    // for ( let i = 0; i < dropbtns.length; i++){
-    //   dropbtns[i].addEventListener('click',function(){
-    //     var content = dropbtns[i].parentNode.parentNode;
-    //     var dropcon = content.getElementsByClassName('dropcon')[0];
-    //     for( var k = 0; k < dropcons.length; k++){
-    //     dropcons[k].style.display = 'none';
-    //   }
-    //     dropcon.classList.toggle('show')
-    //     dropbtns[i].classList.toggle('rotate')
-    //     dropbtns[i].parentNode.classList.toggle('highlight');
-    //   })
-    // }
-    
-    
-    var dropcons = document.getElementsByClassName('dropcon')
-    const dropbtns = document.getElementsByClassName('dropbtn')
     var box = document.getElementById('boximg');
     var heads = document.getElementsByClassName('head');
-    
+    var btnimgs = document.getElementsByClassName('btnimg');
+    var contents = document.getElementsByClassName('dropcon')
+    var questions = document.getElementsByClassName('dropbtn');
+
+    // For Box Movement on mouse over 
     for(var j = 0; j < heads.length; j++){
       heads[j].addEventListener('mouseover', function(){
         box.classList.toggle('move');
       })
     }
-    var btnimgs = document.getElementsByClassName('btnimg');
-    for ( let i = 0; i < dropbtns.length; i++){
-      dropbtns[i].addEventListener('click',function(){
-        var content = dropbtns[i].parentNode.parentNode;
-        var dropcon = content.getElementsByClassName('dropcon')[0];
-        dropcon.classList.toggle('show');
-        btnimgs[i].classList.toggle('rotate')
-        dropbtns[i].parentNode.classList.toggle('highlight');
-        
+    for(var j = 0; j < heads.length; j++){
+      heads[j].addEventListener('mouseout', function(){
+        box.classList.toggle('move');
       })
     }
+
+
+    
+
+    function hide(elem,elem2,h3){
+      for(var i = 0; i < contents.length; i++){
+        contents[i].style.display = 'none';
+      }
+      elem.style.display = 'block';
+      h3.classList.add('highlight');
+      elem2.classList.toggle('rotate');
+    }
+    function show(elem,h3){
+      elem.style.display = 'none';
+      h3.classList.remove('highlight');
+    }
+    var heads = document.getElementsByClassName('head');
+    for(let i = 0; i < heads.length; i++){
+      heads[i].addEventListener('click', function(){
+        var dropcon = heads[i].nextElementSibling;
+        var h3 = heads[i].firstElementChild;
+        
+        var arrow = btnimgs[i];
+        if(dropcon.style.display == 'block'){
+          arrow.classList.toggle('rotate');
+          show(dropcon,h3);
+        }
+        else{
+          for(let j = 0; j < btnimgs.length; j++){
+            btnimgs[j].classList = btnimgs[j].className.replace('rotate','')
+            questions[j].classList = questions[j].className.replace('highlight','')
+          }
+          hide(dropcon,arrow,h3)
+        }
+      })
+    }
+    
+    // Working Model 2
+    // function hidepanel(){
+    //   var dropcons = document.getElementsByClassName('dropcon');
+    //   for(let i = 0; i < dropcons.length; i++){
+    //     if(dropcons[i].style.display = 'block'){
+    //       dropcons[i].style.display = 'none';
+    //     }
+    //   }
+    // }
+    // function showpanel(elem){
+    //   if(elem.style.display == 'none'){
+    //     elem.style.display = 'block';
+    //   }
+    //   // else if(elem.style.display == 'block'){
+    //   //   elem.style.display = 'none';
+    //   // }
+    // }
+
+
+    // var heads = document.getElementsByClassName('head');
+    // for( let i = 0; i < heads.length; i++){
+    //   heads[i].addEventListener('click', function(){
+    //     hidepanel();
+    //     var row = heads[i].parentNode;
+    //     var dropcon = row.getElementsByClassName('dropcon')[0];
+    //     showpanel(dropcon);
+    //   })
+    // }
+
+
+    
+    
+    // Working Model
+    // var dropcons = document.getElementsByClassName('dropcon')
+    // const dropbtns = document.getElementsByClassName('dropbtn')
+    // var btnimgs = document.getElementsByClassName('btnimg');
+    // for ( let i = 0; i < dropbtns.length; i++){
+    //   dropbtns[i].addEventListener('click',function(){
+    //     var content = dropbtns[i].parentNode.parentNode;
+    //     var dropcon = content.getElementsByClassName('dropcon')[0];
+    //     dropcon.classList.toggle('show');
+    //     btnimgs[i].classList.toggle('rotate')
+    //     dropbtns[i].parentNode.classList.toggle('highlight');
+    //   })
+    // }
   </script>
 </html>
