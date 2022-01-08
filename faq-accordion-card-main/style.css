@@ -12,24 +12,22 @@ html{
     position: relative;
 }
 body{
-    font-family: 'Bebas Neue', cursive;
+    position: static;
     font-family: 'Kumbh Sans', sans-serif;
-    font-family: 'M PLUS 2', sans-serif;
-    font-family: 'Roboto Slab', serif;
+    
     background-image: linear-gradient(to top,hsl(273, 75%, 66%),hsl(240, 73%, 65%));
 }
 .container{
+    
     position: absolute;
-    height: 70%;
+    height: auto;
     width: 60%;
-    background-color: hsl(240, 5%, 91%);
+    background-color: rgb(248, 241, 241);
     border-radius: 15px;
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%);
-    overflow: hidden;
 }
-
 .bgimg-con img{
     position: absolute;
     width: 80%;
@@ -43,8 +41,33 @@ body{
     right: 60%;
     top: 5%;
 }
+.box img{
+    position: absolute;
+    left: -20%;
+    top: 30%;
+    z-index: 2;
+}
+.move{
+    animation-name: movement;
+    animation-duration: 0.7s;
+    animation-iteration-count: 1;
+    animation-play-state: running;
+}
+@keyframes movement {
+    0% {
+      transform: translateX(0px);
+    }
+    42% {
+      transform: translateX(-20px);
+    }
+    100% {
+      transform: translateX(-45px);
+    }
+  }
+
 .content h2{
     padding-top: 5%;
+    font-weight: 400;
 }
 .content{
     position: relative;
@@ -64,28 +87,44 @@ body{
 }
 .content .row{
     position: relative;
+    transition: 0.3s ease-in-out;
 }
-.content .row h3 img{
-    position: absolute;
-    right: -1%;
-    top: 15%;
-    user-select: none;
+.content .row {
+    position: relative;
+    float: left;
     cursor: pointer;
-    
+}
+.content .row .head img{
+    position: relative;
+    float: right;
+    top: -25px;
+    transition: 0.5s linear;
+}
+.content .row .head h3{
+    font-weight: 700;
 }
 .dropcon{
     display: none;
-    padding-bottom: 2%;
+    padding-bottom: 10%;
+    padding-bottom: 7%;
+    transition: 0.3s ease-in-out;
+    cursor: auto;
 }
 .rotate{
     transform: rotate(180deg);
-    position: fixed;
-}
-.highlight{
-    color: hsl(236, 96%, 9%);
-    font-size: 14px;
-    font-weight: bolder;
 }
 .show{
     display: block;
+}
+.row h3:hover{
+    cursor: pointer;
+    color: hsl(14, 88%, 65%);
+}
+.highlight{
+    color: hsl(237, 12%, 33%);
+    transition: 0.3s ease;
+    font-size: 12px;
+}
+.highlight:active{
+    color: hsl(14, 88%, 65%);
 }

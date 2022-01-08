@@ -15,46 +15,54 @@
       <div class="woman">
         <img src="images/illustration-woman-online-desktop.svg" alt="">
       </div>
+      <div class="box">
+        <img id="boximg" src="images/illustration-box-desktop.svg" alt="">
+      </div>
       <div class="content">
         <h2><b>FAQ</b></h2>
         <div class="row one">
-          <h3>How many team members can I invite?
-            <img class="dropbtn 1" src="images/icon-arrow-down.svg" alt="">
-           </h3>
+          <div class="head">
+            <h3 class="dropbtn">How many team members can I invite?</h3>
+            <img class="btnimg" src="images/icon-arrow-down.svg" alt="">  
+          </div>
           <div class="dropcon">
             You can invite up to 2 additional users on the Free plan. There is no limit on 
             team members for the Premium plan.
           </div>
         </div>
         <div class="row two">
-          <h3>What is the maximum file upload size?
-            <img class="dropbtn 2" src="images/icon-arrow-down.svg" alt="">
-           </h3>
+          <div class="head">
+            <h3 class="dropbtn">What is the maximum file upload size?</h3>
+            <img class="btnimg" src="images/icon-arrow-down.svg" alt=""> 
+          </div>
           <div class="dropcon">
             No more than 2GB. All files in your account must fit your allotted storage space.
           </div>
         </div>
         <div class="row three">
-          <h3>How do I reset my password?
-            <img class="dropbtn 3" src="images/icon-arrow-down.svg" alt="">
-           </h3>
+          <div class="head">
+            <h3  class="dropbtn">How do I reset my password?</h3>
+            <img class="btnimg" src="images/icon-arrow-down.svg" alt=""> 
+          </div>         
           <div class="dropcon">
             Click “Forgot password” from the login page or “Change password” from your profile page.
             A reset link will be emailed to you.
           </div>
         </div>
         <div class="row four">
-          <h3>Can I cancel my subscription?
-            <img class="dropbtn 4" src="images/icon-arrow-down.svg" alt="">
-           </h3>
+          <div class="head">
+            <h3 class="dropbtn">Can I cancel my subscription?</h3>
+            <img class="btnimg" src="images/icon-arrow-down.svg" alt="">
+          </div>
           <div class="dropcon">
             Yes! Send us a message and we’ll process your request no questions asked.
           </div>
         </div>
         <div class="row five">
-          <h3>Do you provide additional support?
-            <img class="dropbtn 5" src="images/icon-arrow-down.svg" alt="">
-           </h3>
+          <div class="head">
+            <h3 class="dropbtn">Do you provide additional support?</h3>
+            <img class="btnimg" src="images/icon-arrow-down.svg" alt="">
+          </div>
           <div class="dropcon">
             Chat and email support is available 24/7. Phone lines are open during normal business hours.
           </div>
@@ -79,28 +87,27 @@
     //     dropbtns[i].parentNode.classList.toggle('highlight');
     //   })
     // }
-
+    
+    
     var dropcons = document.getElementsByClassName('dropcon')
     const dropbtns = document.getElementsByClassName('dropbtn')
+    var box = document.getElementById('boximg');
+    var heads = document.getElementsByClassName('head');
+    
+    for(var j = 0; j < heads.length; j++){
+      heads[j].addEventListener('mouseover', function(){
+        box.classList.toggle('move');
+      })
+    }
+    var btnimgs = document.getElementsByClassName('btnimg');
     for ( let i = 0; i < dropbtns.length; i++){
       dropbtns[i].addEventListener('click',function(){
-        // for( let k = 0; k < dropcons.length; k++){
-        //   dropcons[k].style.display = 'none';
-        // }
         var content = dropbtns[i].parentNode.parentNode;
         var dropcon = content.getElementsByClassName('dropcon')[0];
         dropcon.classList.toggle('show');
-        if(dropcon.style.display == 'block'){
-          counter = 1
-          console.log(counter)
-        }
-        else{
-          counter = 0;
-          console.log(counter)
-        }
-        
-        dropbtns[i].classList.toggle('rotate')
+        btnimgs[i].classList.toggle('rotate')
         dropbtns[i].parentNode.classList.toggle('highlight');
+        
       })
     }
   </script>
