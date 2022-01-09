@@ -23,6 +23,8 @@
     /* order: 3; */
     /* flex-grow: 2;
     flex-basis: 200px; */
+    position: absolute;
+    left:10px;
 }
 .two{
     /* order:1 */
