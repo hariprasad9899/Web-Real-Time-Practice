@@ -19,16 +19,72 @@
     <div class="about">
       <div class="text">
         <h1> <span class="we">WE'RE</span><br>COMING <br>SOON </h1>
-        <p>Hello fellow shoppers! We're currently building our new fashion store.
+        <p>Hello fellow shoppers! We're currently building our new <br> fashion store.
           Add your email below to stay up-to-date with announcements and our 
           launch deals
         </p>
         <label for="input" class="input">
-          <input type="text" placeholder="Email Address">
-          <button class="btn"><img src="images/icon-arrow.svg" alt=""></button>
+          <input id="input" type="email" placeholder="Email Address">
+          <span class="errimg"><img id="err" src="images/icon-error.svg" alt="" ></span>
+          <button class="btn"><img src="images/icon-arrow.svg" alt=""></button> <br>
         </label>
+        <p id="invalid">please provide a valid email</p>
+        <p id="thanks">Thanks for contacting us !</p>
       </div>
     </div>
   </div>
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Hari Prasad</a>.
+    </p>
+  </footer>
 </body>
+<script>
+  var input,btn,err,invalid,thanks
+  input = document.getElementById('input');
+  btn = document.getElementsByClassName('btn')[0];
+  err = document.getElementById('err');
+  invalid = document.getElementById('invalid');
+  thanks = document.getElementById('thanks');
+
+
+  function validateEmail(val){
+    var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    if (val.match(validRegex)) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  btn.addEventListener('click', ()=>{
+    val = input.value;
+    result = validateEmail(val)
+    if(result == false){
+      err.style.opacity = '1';
+      invalid.style.opacity = '1';
+      input.style.border = '1.5px solid red';
+    }
+    else{
+      thanks.style.opacity = '1';
+      input.style.border = '1.5px solid green';
+    }
+  })
+
+  input.addEventListener('input', ()=>{
+    err.style.opacity = '0';
+    invalid.style.opacity = '0';
+    input.style.border = '1px solid hsl(0, 36%, 70%)';
+    thanks.style.opacity = '0';
+  })
+
+
+  input.addEventListener("keypress", (event)=> {
+      if (event.keyCode === 13) { 
+        btn.click();
+      }
+    });
+ 
+</script>
 </html>
