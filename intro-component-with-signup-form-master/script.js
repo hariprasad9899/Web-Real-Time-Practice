@@ -3,6 +3,8 @@ email = document.getElementById('email');
 inputs = document.getElementsByClassName('inputs')
 claim = document.getElementsByClassName('claim')[0];
 
+// Function to validate Email
+
 function validateEmail(val){
   var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
   if (val.match(validRegex)) {
@@ -12,6 +14,10 @@ function validateEmail(val){
   }
 }
 
+// Adding event listener to claim button so that fname,lname, and password
+// will be inidcted as wrong if empty.
+// Also adding the email validation in the same event listener for email
+//validation.
 claim.addEventListener('click', ()=>{
   for(let x = 0; x < inputs.length; x++){
     if(inputs[x].value.length <=0){
@@ -36,7 +42,8 @@ claim.addEventListener('click', ()=>{
   }
 })
 
-
+// Two event listeners for input event, to clear all the error messages 
+// and erro indications 
 email.addEventListener('input', ()=>{
   email.nextElementSibling.style.display = 'none';
   email.style.background = 'none';
