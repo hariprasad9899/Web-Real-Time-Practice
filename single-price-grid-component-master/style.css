@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Josefin+Sans:wght@300;400;600&family=Karla:wght@400;700&family=Kumbh+Sans&family=M+PLUS+2:wght@300&family=Manrope:wght@500;700&family=Poppins:wght@400;500;600;700&family=Roboto+Slab:wght@300&family=Spartan:wght@500;700&display=swap');
+.attribution{ 
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a{ 
+    color: hsl(228, 45%, 44%); 
+}
+body,html{
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    background-color: hsl(218, 22%, 67%);
+    font-family: 'Karla', sans-serif;
+}
+.container{
+    position: relative;
+    height: 80%;
+    max-height: 80%;
+    width: 50%;
+    background-color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: column;
+}
+.community{
+    height: 45%;
+    width: 100%;
+    background-color: hsl(204, 43%, 93%);
+}
+.community .content{
+    padding:2% 10% 5% 5%;
+}
+.content h2{
+    font-weight: 700;
+    color: hsl(179, 80%, 34%);
+}
+.content h3{
+    font-weight: 700;
+    color: hsl(71, 73%, 54%);
+    font-size: 100%;
+}
+.content p{
+    font-size: 15px;
+    color: hsl(218, 22%, 67%);
+    line-height: 1.5;
+}
+.aboutus{
+    height: 55%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.joinus{
+    height: 100%;
+    width: 50%;
+    background-color: hsl(178, 69%, 38%);
+}
+.price{
+    font-size: 200%;
+}
+.contentjoin, .contentwhy{
+    color: hsl(204, 43%, 93%);
+    padding: 10% 20% 10% 10%;
+}
+.btn{
+    border: none;
+    width: 100%;
+    padding: 5%;
+    background-color: hsl(71, 73%, 54%);
+    color: hsl(204, 43%, 93%);
+    font-weight: 400;
+    border-radius: 5px;
+    box-shadow: 0px 5px 5px rgb(63, 62, 62);
+}
+.month{
+    position: absolute;
+    margin-top: 10px;
+    color: hsl(218, 22%, 67%);
+}
+.whyus{
+    height: 100%;
+    width: 50%;
+    background-color: hsl(179, 62%, 43%);
+}
+.specials{
+    line-height: 1.5;
+    font-size: 90%;
+    margin-top: 5%;
+    color: hsl(204, 43%, 93%);
+    font-size: 80%;
+}
+@media screen and (max-width:950px){
+    .community,.whyus,.aboutus{
+        height: 100%;
+    }
+}
+@media screen and (max-width:800px){
+    .container{
+        height: 100%;
+        width: 80%;
+    }
+    .community{
+        height: 100%;
+    }
+    .aboutus{
+        flex-direction: column;
+        height: 100%;
+    }
+    .joinus,.whyus{
+        width: 100%;
+    }
+    .content p{
+        font-size: 15px;
+    }
+    .contentjoin, .contentwhy{
+        color: hsl(204, 43%, 93%);
+        padding:2% 10% 5% 5%;
+    }
+}
