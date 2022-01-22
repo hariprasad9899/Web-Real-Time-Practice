@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Josefin+Sans:wght@300;400;600&family=Karla:wght@400;700&family=Kumbh+Sans&family=Libre+Franklin:ital,wght@0,300;0,700;1,600&family=M+PLUS+2:wght@300&family=Manrope:wght@500;700&family=Open+Sans&family=Outfit:wght@400;700&family=Poppins:wght@400;600&family=Roboto+Slab:wght@300&family=Spartan:wght@500;700&display=swap');
+
+body{
+    margin: 0;
+    font-family: 'Outfit', sans-serif;
+    background-color: hsl(212, 45%, 89%);
+}
+main{
+    width: 20%;
+    left: 50%;
+    top: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 10px 10px rgb(195, 188, 188);
+}
+section img{
+    position: relative;
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 5%;
+    border-radius: 10px;
+}
+section h3,p{
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+}
+section p{
+    font-size: 80%;
+    color: hsl(220, 15%, 55%);
+    padding-bottom: 30px;
+    font-weight: 400;
+}
+section h3{
+    color: hsl(218, 44%, 22%);
+    margin-bottom: 10px;
+    font-size: 110%;
+    font-weight: 700;
+}
+@media screen and (max-width:1000px){
+    main{
+        width: 30%;
+    }
+    section h3{
+        font-size: 20px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}
+@media screen and (max-width:900px){
+    main{
+        width: 40%;
+    }
+    section h3{
+        font-size: 20px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    section p{
+        font-size: 70%;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}
+@media screen and (max-width:600px){
+    main{
+        width: 50%;
+    }
+    section h3{
+        font-size: 13px;
+    }
+    section h3,p{
+        padding-left: 3px;
+        padding-right: 3px;
+    }
+    section p{
+        font-size: 10px;
+    }
+}
