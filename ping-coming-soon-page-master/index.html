@@ -18,9 +18,10 @@
     </section>
     <div class="email">
       <section>
-        <input type="email" placeholder="Your email address">
-        <input type="submit" value="Notify Me">
+        <input id="email" type="email" placeholder="Your email address..">
+        <input id="submit" type="submit" value="Notify Me" onclick="validate()">
       </section>
+      <p id="error">please provide a valid email address</p>
     </div>
     <picture>
       <img src="images/illustration-dashboard.png" alt="">
@@ -33,7 +34,7 @@
       </nav>
       <p>&copy; Copyright Ping. All rights reserved</p>
     </section>
-    
   </main>
 </body>
+<script src="script.js"></script>
 </html>
