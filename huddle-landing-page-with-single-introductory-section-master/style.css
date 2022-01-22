@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Josefin+Sans:wght@300;400;600&family=Karla:wght@400;700&family=Kumbh+Sans&family=Libre+Franklin:ital,wght@0,300;0,700;1,600&family=M+PLUS+2:wght@300&family=Manrope:wght@500;700&family=Poppins:wght@400;600&family=Roboto+Slab:wght@300&family=Spartan:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Josefin+Sans:wght@300;400;600&family=Karla:wght@400;700&family=Kumbh+Sans&family=Libre+Franklin:ital,wght@0,300;0,700;1,600&family=M+PLUS+2:wght@300&family=Manrope:wght@500;700&family=Open+Sans&family=Poppins:wght@400;600&family=Roboto+Slab:wght@300&family=Spartan:wght@500;700&display=swap');
+body,html{
+    margin: 0;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    background: url("images/bg-desktop.svg") center no-repeat;
+    background-size: cover;
+    background-color: hsl(257, 40%, 49%);
+}
+main{
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+}
+.huddle{
+    width: 60%;
+}
+.community{
+    width: 40%;
+}
+.logo{
+    padding: 3%;
+    width: 20%;
+}
+.illustration{
+    padding: 3%;
+    width: 85%;
+}
+.content{
+    position: relative;
+    padding-top: 25%;
+    padding-right: 15%;
+    color: white;
+}
+.content h1{
+    font-weight: 600;
+    font-size: 30px;
+    font-family: 'Poppins', sans-serif;
+}
+.content p{
+    font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+}
+.navigation{
+    text-align: right;
+    padding-right: 40px;
+    margin-top: 50%;
+}
+nav ul{
+    position: relative;
+    display:inline;
+    color: white;
+    padding: 5px;
+    margin-left: 1%;
+    margin-right: 1%;
+    border-radius: 50%;
+    border: 1px solid white;
+}
+nav ul:hover{
+    color: hsl(300, 69%, 71%);
+    border: 1px solid hsl(300, 69%, 71%);
+}
+#btn{
+    border: none;
+    width: 30%;
+    padding: 10px;
+    color: hsl(257, 40%, 49%);
+    border-radius: 20px;
+    box-shadow: 0px 3px 3px rgb(61, 59, 59);
+}
+#btn:hover{
+    background-color: hsl(300, 69%, 71%);
+    color: white;
+}
+@media screen and (max-height:700px){
+    .navigation{
+        margin-top: 30%;
+    }
+    .illustration{
+        width: 90%;
+    }
+}
+@media screen and (max-width:800px){
+    body{
+        background: url("images/bg-mobile.svg") center no-repeat;
+        background-size: cover;
+        background-color: hsl(257, 40%, 49%);
+    }
+    main{
+        flex-direction: column;
+    }
+    .huddle{
+        width: 100%;
+    }
+    .community{
+        width: 100%;
+    }
+    .illustration{
+        width: 90%;
+    }
+    #btn{
+        width: 50%;
+    }
+    .content{
+        text-align: center;
+        padding-top: 2%;
+        padding-right: 10%;
+        padding-left: 10%;
+    }
+    .navigation{
+        text-align: center;
+        margin-top: 20%;
+        padding-right: 0px;
+    }
+
+}
+@media screen and (max-width:410px){
+    .content h1{
+        font-size: 25px;
+    }
+    .content p{
+        font-size: 15px;
+    }
+    
+}
