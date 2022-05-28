@@ -1,0 +1,9 @@
+@media screen and (max-width:500px) {
+    .partOne,.partTwo {
+        width: 320px;
+        padding: 15px 15px 15px 15px;
+    }
+    .partTwo .sel{
+        width: 80%;
+    }
+}

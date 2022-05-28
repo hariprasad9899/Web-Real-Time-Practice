@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    font-family: 'Overpass', sans-serif;
+}
+html,body,main {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    color: white;
+    overflow: hidden;
+    background-color: hsl(216, 12%, 8%);
+}
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+.partOne {
+    width: 450px;
+    color: white;
+    border-radius: 20px;
+    padding: 20px 25px 20px 25px;
+    background-color: hsl(217, 10%, 16%);
+}
+.star {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 15%;
+}
+.outer {
+    width: 40px;
+    height: 40px;
+    display: grid;
+    border-radius: 50%;
+    background-color:  hsl(212, 12%, 22%);
+}
+.outer img {
+    margin: auto;
+}
+.question h2 {
+    font-size: 2em;
+    font-weight: 700;
+}
+.question p {
+    color: hsl(217, 12%, 63%);
+    line-height: 1.4;
+}
+.rating {
+    display: flex;
+    justify-content: space-between;
+}
+.rating p {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: grid;
+    background-color: hsl(213, 19%, 18%);
+}
+.rating p span {
+    margin: auto;
+}
+.btn {
+    width: 100%;
+    display: flex;
+    margin-top: 20px;
+}
+.btn button {
+    width: 90%;
+    padding: 15px;
+    border: none;
+    outline: none;
+    margin: auto;
+    color: white;
+    font-weight: 700;
+    letter-spacing: 2px;
+    border-radius: 20px;
+    background-color: hsl(25, 97%, 53%);
+    font-family: 'Overpass', sans-serif;
+}
+.btn button:hover {
+    cursor: pointer;
+    background-color: white;
+    color: hsl(25, 97%, 53%);
+}
+.rating p:hover {
+    font-weight: 700;
+    cursor: pointer;
+    background-color: hsl(216, 12%, 54%);
+}
+.rating p.active {
+    background-color: hsl(25, 97%, 53%);
+    font-weight: 700;
+}
+.partTwo {
+    width: 450px;
+    color: white;
+    border-radius: 20px;
+    padding: 20px 25px 20px 25px;
+    text-align: center;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: hsl(217, 10%, 16%);
+}
+.partTwo .sel {
+    width: 250px;
+    padding: 2px;
+    border-radius: 10px;
+    letter-spacing: 1px;
+    color: hsl(25, 97%, 53%);
+    font-weight: 700;
+    background-color: hsl(210, 6%, 27%);
+}
+.partTwo .greet {
+    font-size: 1.1em;
+    color: hsl(217, 12%, 63%);
+    margin-top: -10px;
+}
