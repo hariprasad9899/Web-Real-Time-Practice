@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+html,body,main {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: hsl(217, 54%, 11%);
+}
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+.container {
+    width: 350px;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: hsl(216, 50%, 16%);
+    box-shadow: 0px 16px 16px hsl(215, 55%, 6%);
+}
+.imgSec {
+    width: 100%;
+    position: relative;
+    border-radius: 10px;
+}
+.imgSec img {
+    width: 100%;
+    border-radius: 10px;
+}
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 99%;
+    border-radius: 10px;
+    top: 0;
+    display: grid;
+    transition: 0.5s ease-in-out;
+}
+.overlay img {
+    display: none;
+    margin: auto;
+    width: 50px;
+}
+.imgSec:hover .overlay {
+    cursor: pointer;
+    background-color: hsla(178, 100%, 50%, 0.343);
+}
+.imgSec:hover .overlay img {
+    display: block;
+}
+.contentOne {
+    color: hsl(215, 51%, 70%);
+}
+.contentOne p:nth-child(1) {
+    font-size: 1.4em;
+    color: white;
+    font-weight: 600;
+}
+.contentOne p:nth-child(2) {
+    margin-top: -10px;
+}
+.contentTwo {
+    display: flex;
+    justify-content: space-between;
+}
+.eth,.time {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+.eth p {
+    font-size: 0.9em;
+    color: hsl(178, 100%, 50%);
+    font-weight: 600;
+}
+.time p {
+    color: hsl(215, 51%, 70%);
+    font-size: 0.9em;
+}
+.contentFour {
+    border-top: 1px solid hsl(215, 51%, 70%);
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+    gap: 10px;
+    margin-top: 15px;
+}
+.userImg {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+.userImg img {
+    width: 100%;
+    height: 100%;
+}
+.text {
+    color: hsl(215, 51%, 70%);
+}
+.text .name {
+    color: white;
+    font-weight: 400;
+}
